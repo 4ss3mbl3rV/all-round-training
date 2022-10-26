@@ -7,7 +7,7 @@ function Connect-Linux {
     [string]$Shell
   )
   if ($Shell -in "tmux", "Tmux", "TMUX"){
-    ssh $Username@$IPAddr -t -- /bin/zsh -c 'tmux has-session && exec tmux attach || exec tmux'
+    ssh $Username@$IPAddr -t -- /bin/sh -c 'tmux has-session && exec tmux attach || exec tmux'
   }
       <#
         .SYNOPSIS
