@@ -1,5 +1,6 @@
+$URI = "Place Your URL Here"
 $command = {
-Invoke-WebRequest -Uri https://wallpapersafari.com/download/qRHscL/ -outFile "$env:TEMP\pleasedontdeleteme.jpg"
+Invoke-WebRequest -Uri $URI -outFile "$env:TEMP\pleasedontdeleteme.jpg"
 $wallpaper_path="$env:TEMP\pleasedontdeleteme.jpg"
 function Set-Wallpaper($MyWallpaper){
 $code = @' 
