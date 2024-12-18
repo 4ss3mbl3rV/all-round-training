@@ -1,3 +1,3 @@
-# powershell-training
+# All Round Training
 
-The repository that collects all of my powershell scripts that wrote for some specific tasks
+The repository that collects all of my notes and scripts that wrote for some reminding myself =)
