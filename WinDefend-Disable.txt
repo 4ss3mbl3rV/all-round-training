@@ -1,0 +1,23 @@
+Windows Defender Turn off using Registry
+
+1. Disable real-time and tampered protection
+2. regedit and modify as show below,
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\
+ - REG_DWORD -> DisableAntiSpyware = 1
+ - REG_DWORD -> DisableRealTime Monitoring = 1
+ - REG_DWORD -> DisableAntiVirus = 1
+ - REG_DWORD -> DisableSpecialRunningModes = 1
+ - REG_DWORD -> DisableRoutinelyTakingAction = 1
+ - REG_DWORD -> ServiceKeepAlive = 1
+ 
+New Key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+ - REG_DWORD -> DisableBehaviourMonitoring = 1
+ - REG_DWORD -> DisableOnAccessProtection = 1
+ - REG_DWORD -> DisableRealtimeMonitoring = 1
+ - REG_DWORD -> DisableScanOnRealtimeEnable = 1
+ 
+New Key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Signature Update
+ - REG_DWORD -> ForceUpdateFromMU = 1
+New key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet
+ - REG_DWORD -> DisableBlockAtFirstSeen = 1
